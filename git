@@ -1,0 +1,10 @@
+cd gitrepo/
+git init
+touch <file1>
+vim <file1>
+cat <file1>
+git add <file1>
+git status
+git commit -m "hello"
+git push -u https://github url
+git pull origin main
