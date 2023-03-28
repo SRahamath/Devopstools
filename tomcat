@@ -1,0 +1,30 @@
+launch ec2 instance - linux server
+connect with mobaxterm with the use of IP address and pem file
+sudo bash or sudo su -
+cd /opt
+yum install java
+java -version/ --version
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.73/bin/apache-tomcat-9.0.73.tar.gz
+tar -xzvf apache</tab>
+cd apache</tab>
+ls
+cd bin/
+ls
+./startup.sh
+copy instance ipaddress:8080 (browser)
+start tomcat
+cd conf/
+ls
+vi tomcat-users.xml
+edit the code (username and pswd)
+cd webapps
+ls
+cd manager
+ls
+vi context.xml
+edit the code <!--value-->
+<user username="name" password="pswd" roles="admin-gui,manager-gui,manager-script,manager-status"/>
+</tomcat-users>
+go to managerapp
+username and password then signin 
+display the tomcat manager application.
