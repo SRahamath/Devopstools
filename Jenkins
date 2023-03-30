@@ -1,0 +1,32 @@
+create ec2 instance
+conect to mobaxterm with the help of pem key
+sudo su -
+cd /opt
+go to web browser(jenkins.io) 
+(Redhat/fedoraa/alma/rocky/centos) click this link
+download the jenkins commands one by one upto jenkins (4 commands)
+systemctl status jenkins
+wget <copy maven url>
+tar -xzvf <maven tab>
+cd <apache  tab>
+cd bin/
+      vi ~/.bash_profile (set path)
+      echo "$PATH"
+      source ~/.bash_profile
+      echo "$PATH"
+mvn --version
+yum install git
+systemctl start jenkins
+go to web browser copy the (public IP:8080)
+copy the path and paste in mobaxterm (cat <path>)
+password
+copy the password and paste in jenkins web browser 
+select install plugins
+getting started
+set the new username, password, mail id 
+jenkins main page click on (if we go with master and slave jenkins -we use "not now" option)
+jenkins started
+manage jenkins-> global tool configuration-> Add jdk-> Name: "Java", Path: "Java path"(copy path from mobaxterm),Add maven->Name:"Maven",path: "Maven path"(copy path from mobaxterm)
+manage plugins-> available plugins-> search "maven integration", "ssh agent"-> install plugins
+
+CREATE A JOB
