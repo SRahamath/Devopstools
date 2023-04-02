@@ -1,0 +1,119 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+$ ls    = show list of file/folder in directory.
+$ ls -l = list based on alphabetical order(a-z)
+$ ls -lr = list based on alphabetical order(z-a)
+$ ls -lt  = based on time (new-old)
+$ ls -ltr  = based on time (old-new)
+$ ls -l <filename> = list of file based on alphabetical in a particular direc
+$ ll   = same as $ls
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+LINE START WITH ( - ) = NORML FILE
+LINE START WITH ( d ) = directory file
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+create directory
+
+$ mkdir <foldername>
++++++++++++++++++++++++++++++
+create file 
+
+$ touch <filename>
+
+or vi <filename>  ( if file exist it go inside. if there is no file it create file and go inside)
+
++++++++++++++++++++++++++++++++++++++
+to read content in file 
+
+$ cat <filename.txt>      {show from top to bottom}
+$ tac <filename.txt>     {show from bottom to top} 
+
+$ cat file1.txt > file2.txt          {copying }
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+$ rmdir <foldername>     only remove empty directory
+$ rm -r <foldername>     delete directory which contains file
+ ++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++
+ $ mv file1.txt file2.txt  { rename file}
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++
+ 
+copy file one file to another file
+
+$ cat filename.txt > file2.txt    { eventhough file not exist it create itself}
+
+$ cat file1.txt file2.txt > file3.txt {multiple copy}
+
+$ cat file1.txt file2.txt file3.txt > file4.txt {multiple copy}
+
+++++++++++++++++++++++++++++++++++++++++++++
+ copy 
+ $ cp file.txt file2.txt
+ 
+ ++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++
+ 
+ move file from one directory to another
+ 
+ $ mv /home/ec2-user/folder1 /home/ec2-user/folder2/     {mv <source directory > <target directory> }
+ 
+ +++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ permissions 
+ 
+$$$ chmod commond used to change permission to files and folder
+
+u = user
+g = groups
+o = other
+
+
+permission 
+x = execute permission 
+r = read only permission
+w = write only permission
+
+example
+
+$ chmod u+rwx <filename>   {user get all 3 permission }
+$ chmod u-rwx <filename> { user denied all 3 permission}
+
+ex:-
+$ chmod u+w filename
+$ chmod u-r filename
+
+$ chmod g+x filname
+$ chmod g-x filename
+
+$ chmod o+r filename
+$ chmod o-w filename
+
+++++++++++++++++++++++++++++++++++++++++
+ other node also we acn change permission
+ 
+ 0 = no permission
+ 1 = only execute permission
+ 2 = only write permission
+ 3 =execute and write permission
+ 4 = only read permission 
+ 5 = read and execute permission
+ 6 = read, write permission
+ 7 = all three permission
+ 
+ $ chmod 777 <filename>
+ $ chmod 765 filename
+ $ chmod 6 <filename >    others get read and write permission
+ 
+ u    g   o
+ rwx-rwx-rwx
+ 
+ 
++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++
+ 
+
+
+
+
