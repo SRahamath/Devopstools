@@ -1,0 +1,45 @@
+create ec2 instance (minimum 4GB instance, inbound rules-port no:9000)
+connect with mobaxterm
+sudo su -
+cd /opt
+$ yum install java-11* -y
+$ wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip 
+$ unzip sonar<tab>
+$ cd sonar <tab>
+$ ls
+$ cd bin/
+$ cd linux-86-64/
+$ ./sonar.sh start
+$ ./sonar.sh status (not running)
+###############################################
+cd ...
+opt> useradd <sonaradmin>
+opt> id sonaradmin
+opt> pswd sonaradmin
+new pswd:***********
+chown -R sonaradmin:sonaradmin /opt/sonarqube<tab>
+$ cd bin/
+$ cd linux-86-64/
+$ ./sonar.sh start
+$ ./sonar.sh status (isrunning)
+#################################################
+goto browser in that will give ec2 Ip address:9000
+sonar login page
+username: Admin
+Password: Admin
+Update your password:
+Get Password:
+New Password:
+###################################################
+sonar login page -> add a project -> select manually option
+create the project
+project key: sonar_project -> set up
+generate a token ->click on continue option ->select maven option
+3line -> Dsonar <token> <copy>
+connect with jenkins
+goto manage plugins-> available plugins-> sonarscanner->install
+goto global tool configuration-> sonar scanner-> select automatically :4.6.2.2472 version option -> click on save option
+goto managejenkins-> configure system->add -> sonarqubescanner-> name:sonarqube-8.9.10 , URL: token <paste>-> click on apply and save button
+goto manage jenkins-> Add credentials-> select new credentials-> secret.text-> token <paste>
+ID: sonartoken, Description : sonartoken-> create
+
