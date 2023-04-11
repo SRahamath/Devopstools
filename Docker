@@ -1,0 +1,20 @@
+create ec2 instance with port no:8080
+connect with mobaxterm
+$ sudo su -
+$cd /opt
+$ yum update -y
+$ yum install docker -y
+$ service docker start
+$ docker --version
+$ docker image
+$ docker build
+$ docker history
+$ docker ps -a
+$ docker run hello-world
+$ docker ps -a
+$ docker start containerid
+$ docker stop containerid
+#########################################################
+goto browser-> jenkins docker image -> jenkins 1st command <copylink>
+$ sudo <paste link>:2.60.3
+goto new tab ->ec2 ipaddress:8080
