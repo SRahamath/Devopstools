@@ -18,3 +18,26 @@ $ docker stop containerid
 goto browser-> jenkins docker image -> jenkins 1st command <copylink>
 $ sudo <paste link>:2.60.3
 goto new tab ->ec2 ipaddress:8080
+++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+docker architecture: 12/04
+
+
+note:-
+
+1.client : it is machine from where we are running docker commonds .a. docker run b. docker build . c.docker pull
+
+2.docker host: it is machine where we are running docker container.
+
+3. registery it could be dockerhub,nexus,jfrong,artifactory,etc
+
+     A. when we run continers it check for image locally. if present, uses it. otherwise it pull from docker registry , if no registry is configure ,it uses docker hub by default
+  B.This both client and host connect with EC2 server of our local host
+  C. REGISTRY IS LIKE DOCKERHUUB IT CONTAINS IMAGES AND EXTENSION AN PLUGINS
+  D. IN IMAGES NGINX,
+  
+  
+  ===========================================================================================
+  
+  ==============================================================================================
