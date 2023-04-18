@@ -39,5 +39,24 @@ note:-
   
   
   ===========================================================================================
-  
+   CREAT FILE AND PUSH INTO PRIVATE REPOSITARY(DOCKERHUB)
+   
+  189 service docker start
+  190  service docker status
+  191  docker images
+  192  vim Dockerfile   
+  ======== 
+ FROM ubuntu
+ RUN echo "hello world" > /tmp/folder6  
+  ======
+  193  cat Dockerfile
+  194  docker build -t image7 .
+  195  docker ps -a
+  196  docker images
+  197  docker run -it --name cont-3 image7 /bin/bash
+  198  docker tag image7 sujeshpk/newww
+  199  docker push sujeshpk/newww
+  200  cd /opt
+  201  history
+
   ==============================================================================================
